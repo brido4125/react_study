@@ -7,9 +7,9 @@ function App() {
   let[like,likeHandler] = useState([0,0,0])
   let [modal,modalHandler] = useState(false);
 
-  function changeLikeArray(){
+  function changeLikeArray(index){
     let newData = [...like]
-    newData[0] = 4;
+    newData[index]++;
     likeHandler(newData)
   }
 
@@ -19,12 +19,14 @@ function App() {
         <div style={{color : 'blue',fontSize : '20px'}}>홍대박 블로그</div>
       </div>
       {
-        title.map(function(index){
+        title.map(function(event,index){
           return (
             <div className="list">
-              <h3>{index}
-              <span onClick={changeLikeArray}>❤️</span>
-              {like}
+              <h3>{event}
+              <span onClick={()=>{
+                changeLikeArray(index)
+              }}>❤️</span>
+              {like[index]}
               </h3>
               <p>8월 18일 발행</p>
               <hr/>
