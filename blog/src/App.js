@@ -5,6 +5,7 @@ function App() {
 
   let [글제목,글제목변경] = useState(['제목1','제목2','제목3'])
   let[따봉,따봉변경] = useState(0)
+  let [modal,modalHandler] = useState(false);
 
 function changeTitle(){
   var newData = [...글제목];
@@ -32,11 +33,24 @@ function changeTitle(){
         <hr/>
       </div>
       <div className="list">
-        <h3>{글제목[2]}</h3>
+        <h3 onClick={()=>{
+          modalHandler(true)
+        }}>{글제목[2]}</h3>
         <p>8월 18일 발행</p>
         <hr/>
       </div>
-      <Modal></Modal>
+      <button onClick={()=>{
+          if(modal === false){
+            modalHandler(true)
+          }else{
+            modalHandler(false)
+          }
+      }}>모달 On/Off</button>
+      {
+        modal === true
+        ? <Modal></Modal>
+        : null
+      }
     </div>
   );
 }
