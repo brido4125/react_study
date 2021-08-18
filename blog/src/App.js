@@ -18,7 +18,6 @@ function changeTitle(){
       <div className="black-nav">
         <div style={{color : 'blue',fontSize : '20px'}}>홍대박 블로그</div>
       </div>
-      <button onClick={changeTitle}>제목변경</button>
       <div className="list">
         <h3>{글제목[0]} 
         <span onClick={()=>{
@@ -37,8 +36,19 @@ function changeTitle(){
         <p>8월 18일 발행</p>
         <hr/>
       </div>
+      <Modal></Modal>
     </div>
   );
+}
+
+function Modal(){
+  return(
+<div className="modal">
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+  )
 }
 
 export default App;
