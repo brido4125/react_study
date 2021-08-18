@@ -34,14 +34,21 @@ function App() {
           )
         })
       }
+      <button onClick={()=>{modalHandler(!modal)}}>열고닫기</button>
+      {
+        modal === true
+        ? <Modal title={title}></Modal>
+        : null
+      }  
+
     </div>
   );
 }
 
-function Modal(){
+function Modal(props){
   return(
 <div className="modal">
-        <h2>제목</h2>
+        <h2>{props.title[2]}</h2>
         <p>날짜</p>
         <p>상세내용</p>
       </div>
