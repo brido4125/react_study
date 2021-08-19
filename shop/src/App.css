@@ -1,3 +1,11 @@
+.jumbotron {
+  background: lightgray;
+  height: 40vh;
+  color: white;
+  display: grid;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
