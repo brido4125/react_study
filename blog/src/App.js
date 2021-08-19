@@ -59,7 +59,8 @@ function App() {
         modal === true
         ? <Modal title={title} modalIndex={modalIndex}></Modal>
         : null
-      }  
+      }
+      <Profile></Profile>  
 
     </div>
   );
@@ -74,6 +75,25 @@ function Modal(props){
         <p>상세내용</p>
       </div>
   )
+}
+
+class Profile extends React.Component{
+  constructor(){
+    super();
+    this.state = { name : 'hong', age : 24}
+  }
+  changeName(){
+    this.setState({name : 'daebak'})
+  }
+  render(){
+    return(
+      <div>
+        <h3>프로필입니다.</h3>
+        <p>이름은 {this.state.name} 입니다.</p>
+        <button onClick={this.changeName.bind(this)}>홍대박으로 변경 버튼</button>
+      </div>
+    )
+  }
 }
 
 export default App;
