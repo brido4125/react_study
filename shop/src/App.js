@@ -7,7 +7,6 @@ import { Item } from "./component/Item";
 
 function App() {
   let [shoes, setShoes] = useState(Data);
-
   return (
     <div className="App">
       <Navbar bg="light" expand="lg">

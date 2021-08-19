@@ -5,8 +5,9 @@ import Image from "../images";
 export function Item(props) {
   let itemList = [...props.shoes];
   let imageList = [...Image];
-  console.log(imageList[0]);
   return itemList.map((event, index) => {
+    // src = {"https://codingapple1.github.io/shop/shoes" + (index+1) + ".jpg"} or {imageList[index]}
+
     return (
       <div className="col-md-4" key={index}>
         <img src={imageList[index]} width="100%" />
