@@ -7,11 +7,20 @@ function App() {
   let[like,likeHandler] = useState([0,0,0])
   let [modal,modalHandler] = useState(false);
   let [modalIndex,modalIndexHandler] = useState(0)
+  let [input,setInput] = useState('')
 
   function changeLikeArray(index){
     let newData = [...like]
     newData[index]++;
     likeHandler(newData)
+  }
+
+  function changeTitle(newTitle){
+      let newArray = [...title]
+      newArray.unshift(newTitle)//제일 앞에 푸쉬
+      //newArray.push(newTitle) 
+      like.push(0)
+      titleHandler(newArray)
   }
 
   return (
@@ -22,7 +31,7 @@ function App() {
       {
         title.map(function(event,index){
           return (
-            <div className="list">
+            <div className="list" key={index}>
               <h3 onClick={()=>{modalIndexHandler(index)}}>{event}
               <span onClick={()=>{
                 changeLikeArray(index)
@@ -35,11 +44,17 @@ function App() {
           )
         })
       }
-      <button onClick={()=>{modalIndexHandler(0)}}>버튼1</button>
-      <button onClick={()=>{modalIndexHandler(1)}}>버튼2</button>
-      <button onClick={()=>{modalIndexHandler(2)}}>버튼3</button>
-
-      <button onClick={()=>{modalHandler(!modal)}}>열고닫기</button>
+      <div className="publish">
+        <input placeholder="글 제목을 입력하세요" onChange={(e)=>{
+        setInput(e.target.value)
+        }}/>
+        <button onClick={()=>{
+          changeTitle(input)
+        }}>저장</button>
+      </div> 
+      <div>
+        <button onClick={()=>{modalHandler(!modal)}}>열고닫기</button>
+      </div>
       {
         modal === true
         ? <Modal title={title} modalIndex={modalIndex}></Modal>
