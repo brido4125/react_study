@@ -16,3 +16,8 @@
 
 
 - [공식사이트](https://react-bootstrap.netlify.app/)를 참고해서 다양한 컴포넌트들을 불러와서 사용하면 된다.
+
+## React-Route-Dom 설치법
+- 해당 프로젝트 디렉토리로 이동 후, `npm install react-router-dom` 으로 설치한다.
+- 라우트를 통해 웹 사이트내의 다양한 세부 페이지를 구현 할 수 있다.
+- `Rotue`, `Link` , `Switch` 등의 컴포넌트와 `useHistory()`,`useParams()`등의 메소드를 활용 할 수 있다.
