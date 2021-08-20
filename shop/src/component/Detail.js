@@ -2,6 +2,16 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { useHistory, useParams } from "react-router-dom";
+import styled from "styled-components";
+import "../Detail.scss";
+
+let Box = styled.div`
+  padding: 20px;
+`;
+let Title = styled.h4`
+  font-size: 25px;
+  color: ${(props) => props.color};
+`;
 
 export function Detail(props) {
   let { id } = useParams();
@@ -13,6 +23,12 @@ export function Detail(props) {
   });
   return (
     <div className="container">
+      <Box>
+        <Title color="blue">Detail</Title>
+      </Box>
+      <div className="soldOut-yellow">
+        <p>재고가 얼마 남지 않았습니다.</p>
+      </div>
       <div className="row">
         <div className="col-md-6">
           <img
