@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import Image from "../images";
+import "../Item.scss";
+import { Link } from "react-router-dom";
 
 export function Item(props) {
   let itemList = [...props.shoes];
@@ -11,7 +13,9 @@ export function Item(props) {
     return (
       <div className="col-md-4" key={index}>
         <img src={imageList[index]} width="100%" />
-        <h4>{props.shoes[index].title}</h4>
+        <Link className="itemName" to={"/detail/" + index}>
+          {props.shoes[index].title}
+        </Link>
         <p>
           {props.shoes[index].content} & {props.shoes[index].price}
         </p>
