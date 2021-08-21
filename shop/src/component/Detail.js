@@ -39,13 +39,8 @@ export function Detail(props) {
         <Title color="blue">Detail</Title>
       </Box>
       {value}
-      <input
-        onChange={(e) => {
-          setValue(e.target.value);
-        }}
-      />
-      {alert === true ? (
-        <div className="soldOut">
+      {props.stock[index] < 10 && alert === true ? (
+        <div className="soldOut-yellow">
           <p>곧 매진!</p>
         </div>
       ) : null}
@@ -62,6 +57,7 @@ export function Detail(props) {
           <h4 className="pt-5">{findItem.title}</h4>
           <p>{findItem.content}</p>
           <p>{findItem.price}원</p>
+          <Stock stock={props.stock} index={index}></Stock>
           <button className="btn btn-danger">주문하기</button>
           <button
             className="btn btn-danger"
@@ -75,6 +71,10 @@ export function Detail(props) {
       </div>
     </div>
   );
+}
+
+function Stock(props) {
+  return <p>재고 : {props.stock[props.index]}</p>;
 }
 
 export default Detail;

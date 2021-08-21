@@ -11,6 +11,7 @@ import { Detail } from "./component/Detail";
 
 function App() {
   let [shoes, setShoes] = useState(Data);
+  let [stock, setStock] = useState([9, 20, 22, 32]);
 
   return (
     <div className="App">
@@ -39,7 +40,7 @@ function App() {
         </button>
       </Route>
       <Route path="/detail/:id">
-        <Detail shoes={shoes}></Detail>
+        <Detail shoes={shoes} stock={stock} setStock={setStock}></Detail>
       </Route>
     </div>
   );
