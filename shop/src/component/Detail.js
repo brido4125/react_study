@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
 import "../Detail.scss";
