@@ -1,5 +1,5 @@
 # react_study
-리액트 연습장
+[리액트 연습장](https://brido4125.github.io/)
 
 ## 리액트 프로젝트 만드는 방법
 - `npx create-react-app 프로젝트네임`으로 리액트 프로젝트 생성
