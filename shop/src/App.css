@@ -1,13 +1,8 @@
-.jumbotron {
-  background: lightgray;
-  height: 40vh;
-  color: white;
-  display: grid;
-  align-items: center;
-}
-
 .App {
   text-align: center;
+}
+.carousel-item img {
+  max-height: 400px; /* input your desired height here */
 }
 
 .App-logo {

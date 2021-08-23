@@ -7,12 +7,16 @@ export function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">
-              Home
+              메인
+            </Nav.Link>
+            <LoginModal>로그인</LoginModal>
+            <Nav.Link as={Link} to="/cart">
+              장바구니
             </Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -25,7 +29,6 @@ export function Navigation() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <LoginModal></LoginModal>
           </Nav>
         </Navbar.Collapse>
       </Container>

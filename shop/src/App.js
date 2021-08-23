@@ -44,11 +44,11 @@ function App() {
           더보기
         </button>
       </Route>
-      <Route path="/detail/:id">
+      <Route exact path="/detail/:id">
         <Detail shoes={shoes} stock={stock} setStock={setStock}></Detail>
       </Route>
-      <Route>
-        <Cart path="/cart"> </Cart>
+      <Route path="/cart">
+        <Cart> </Cart>
       </Route>
     </div>
   );

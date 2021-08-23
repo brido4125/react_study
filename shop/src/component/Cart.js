@@ -1,39 +1,40 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-function Cart() {
+import { connect } from "react-redux";
+
+function Cart(props) {
   return (
     <div>
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>변경</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          {props.state.map((a, i) => {
+            return (
+              <tr key={i}>
+                <td>{a.id}</td>
+                <td>{a.name}</td>
+                <td>{a.quan}</td>
+                <td>@mdo</td>
+              </tr>
+            );
+          })}
         </tbody>
       </Table>
     </div>
   );
 }
 
-export default Cart;
+function getData(state) {
+  return {
+    state: state,
+  };
+}
+
+export default connect(getData)(Cart);

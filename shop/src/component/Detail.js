@@ -62,7 +62,7 @@ export function Detail(props) {
           <p>{findItem.content}</p>
           <p>{findItem.price}원</p>
           <Stock stock={props.stock} index={index}></Stock>
-          <button className="btn btn-danger">주문하기</button>
+          <button className="btn btn-danger">장바구니에 담기</button>
           <button
             className="btn btn-danger"
             onClick={() => {
