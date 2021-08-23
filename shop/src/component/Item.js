@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import React, { useContext } from "react";
 import "../Item.scss";
 import { Link } from "react-router-dom";
+import { stockContext } from "../App";
 
 export function Item(props) {
   let itemList = [...props.shoes];
+  let stock = useContext(stockContext);
   return itemList.map((event, index) => {
     return (
       <div className="col-md-4" key={index}>
@@ -20,6 +22,7 @@ export function Item(props) {
         <p>
           {props.shoes[index].content} & {props.shoes[index].price}
         </p>
+        <p>{stock[index]}</p>
       </div>
     );
   });

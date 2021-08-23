@@ -8,6 +8,9 @@ import Navigation from "./component/Navigation";
 import { Item } from "./component/Item";
 import { Route } from "react-router-dom";
 import { Detail } from "./component/Detail";
+import Cart from "./component/Cart";
+
+export let stockContext = React.createContext();
 
 function App() {
   let [shoes, setShoes] = useState(Data);
@@ -19,9 +22,11 @@ function App() {
       <Route exact path="/">
         <Jumbotron></Jumbotron>
         <div className="container">
-          <div className="row">
-            <Item shoes={shoes}></Item>
-          </div>
+          <stockContext.Provider value={stock}>
+            <div className="row">
+              <Item shoes={shoes}></Item>
+            </div>
+          </stockContext.Provider>
         </div>
         <button
           className="btn btn-primary"
@@ -41,6 +46,9 @@ function App() {
       </Route>
       <Route path="/detail/:id">
         <Detail shoes={shoes} stock={stock} setStock={setStock}></Detail>
+      </Route>
+      <Route>
+        <Cart path="/cart"> </Cart>
       </Route>
     </div>
   );

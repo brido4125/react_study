@@ -2,6 +2,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import "../Detail.scss";
 
@@ -16,6 +18,8 @@ let Title = styled.h4`
 export function Detail(props) {
   let [alert, setAlert] = useState(true);
   let [value, setValue] = useState("");
+  let [tab, setTab] = useState(0);
+  let [aniValue, setAniValue] = useState(false);
   //useEffect는 두번째 인자가 없으면 컴포넌트가 업데이트 될 때마다 실행된다. 그래서 두번째 인자에 해당 state를 넣어서 반복실행을 막아주면 좋다
   //만약 두번째 인자로 빈 배열 [] 을 전달해주면 해당 useEffect는 해당 컴포넌트가 실행됨과 동시에 더이상 실행되지 않는다
   useEffect(() => {
@@ -69,8 +73,46 @@ export function Detail(props) {
           </button>
         </div>
       </div>
+      <Nav className="mt-5" variant="tabs" defaultActiveKey="link-0">
+        <Nav.Item>
+          <Nav.Link
+            eventKey="link-0"
+            onClick={() => {
+              setAniValue(false);
+              setTab(0);
+            }}
+          >
+            Active
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link
+            eventKey="link-1"
+            onClick={() => {
+              setAniValue(false);
+              setTab(1);
+            }}
+          >
+            Option 2
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+      <CSSTransition in={aniValue} classNames="wow" timeout={500}>
+        <TabContent tab={tab} setAniValue={setAniValue}></TabContent>
+      </CSSTransition>
     </div>
   );
+}
+
+function TabContent(props) {
+  useEffect(() => {
+    props.setAniValue(true);
+  });
+  if (props.tab === 0) {
+    return <div>0번째</div>;
+  } else if (props.tab === 1) {
+    return <div>1번째</div>;
+  }
 }
 
 function Stock(props) {
