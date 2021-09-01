@@ -7,9 +7,27 @@ import { BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-let store = createStore(() => {
-  return [{ id: 0, name: "eazyboost", quan: 38 }];
-});
+
+let defaultState = [
+  { id: 0, name: "canvas", quan: 22 },
+  { id: 1, name: "NB990", quan: 34 },
+];
+
+function reducer(state = defaultState, action) {
+  if (action.type === "증가") {
+    let copy = [...state];
+    copy[0].quan++;
+    return copy;
+  } else if (action.type === "감소") {
+    let copy = [...state];
+    copy[0].quan--;
+    return copy;
+  }
+
+  return state;
+}
+
+let store = createStore(reducer);
 
 //BrowserRouter vs HashRouter => #기호가 들어가서 서버에서 URL 해시를 읽을 수 없다
 ReactDOM.render(

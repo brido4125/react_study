@@ -9,7 +9,7 @@ export function Item(props) {
   let stock = useContext(stockContext);
   return itemList.map((event, index) => {
     return (
-      <div className="col-md-4" key={index}>
+      <div className="col-md-3" key={index}>
         <img
           src={
             "https://codingapple1.github.io/shop/shoes" + (index + 1) + ".jpg"

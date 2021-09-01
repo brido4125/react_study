@@ -21,7 +21,22 @@ function Cart(props) {
                 <td>{a.id}</td>
                 <td>{a.name}</td>
                 <td>{a.quan}</td>
-                <td>@mdo</td>
+                <td>
+                  <button
+                    onClick={() => {
+                      props.dispatch({ type: "증가" });
+                    }}
+                  >
+                    +
+                  </button>
+                  <button
+                    onClick={() => {
+                      props.dispatch({ type: "감소" });
+                    }}
+                  >
+                    -
+                  </button>
+                </td>
               </tr>
             );
           })}
