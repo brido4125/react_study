@@ -16,11 +16,15 @@ let defaultState = [
 function reducer(state = defaultState, action) {
   if (action.type === "증가") {
     let copy = [...state];
-    copy[0].quan++;
+    copy[action.index].quan++;
     return copy;
   } else if (action.type === "감소") {
     let copy = [...state];
-    copy[0].quan--;
+    if (copy[action.index].quan > 0) {
+      copy[action.index].quan--;
+    } else {
+      alert("수랑은 0보다 작을 수 없어요");
+    }
     return copy;
   }
 
