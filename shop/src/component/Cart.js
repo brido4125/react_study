@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import { connect } from "react-redux";
 
 function Cart(props) {
@@ -42,13 +42,26 @@ function Cart(props) {
           })}
         </tbody>
       </Table>
+      {props.alertState === true ? (
+        <div className="soldOut-yellow">
+          <p>지금 구매하시면 신규할인 20%</p>
+          <button
+            onClick={() => {
+              props.dispatch({ type: false });
+            }}
+          >
+            닫기
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }
 
 function getData(state) {
   return {
-    state: state,
+    state: state.reducer,
+    alertState: state.alertReducer,
   };
 }
 

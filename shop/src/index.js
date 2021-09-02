@@ -6,7 +6,19 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
+
+let alertDefaultState = true;
+
+function alertReducer(state = alertDefaultState, action) {
+  if (action.type === false) {
+    let copy = state;
+    copy = false;
+    return copy;
+  } else {
+    return state;
+  }
+}
 
 let defaultState = [
   { id: 0, name: "canvas", quan: 22 },
@@ -31,7 +43,7 @@ function reducer(state = defaultState, action) {
   return state;
 }
 
-let store = createStore(reducer);
+let store = createStore(combineReducers({ reducer, alertReducer }));
 
 //BrowserRouter vs HashRouter => #기호가 들어가서 서버에서 URL 해시를 읽을 수 없다
 ReactDOM.render(
