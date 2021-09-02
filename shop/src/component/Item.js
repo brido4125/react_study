@@ -16,7 +16,7 @@ export function Item(props) {
           }
           width="100%"
         />
-        <Link className="itemName" to={"/detail/" + index}>
+        <Link className="itemName" to={"/detail/" + props.shoes[index].id}>
           {props.shoes[index].title}
         </Link>
         <p>

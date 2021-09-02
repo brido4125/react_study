@@ -23,14 +23,23 @@ function alertReducer(state = alertDefaultState, action) {
 }
 
 let defaultState = [
-  { id: 0, name: "canvas", quan: 22 },
-  { id: 1, name: "NB990", quan: 34 },
+  { id: 22, name: "canvas", quan: 22 },
+  { id: 21, name: "NB990", quan: 34 },
 ];
 function reducer(state = defaultState, action) {
   if (action.type === "장바구니추가") {
-    let copy = [...state];
-    copy.push(action.payload);
-    return copy;
+    let foundIndex = state.findIndex((a) => {
+      return a.id === action.payload.id;
+    });
+    if (foundIndex >= 0) {
+      let copy = [...state];
+      copy[foundIndex].quan++;
+      return copy;
+    } else {
+      let copy = [...state];
+      copy.push(action.payload);
+      return copy;
+    }
   } else if (action.type === "증가") {
     let copy = [...state];
     copy[action.index].quan++;

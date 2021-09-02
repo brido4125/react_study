@@ -18,7 +18,7 @@ let Title = styled.h4`
 
 function Detail(props) {
   let [alert, setAlert] = useState(true);
-  let [value, setValue] = useState("");
+  let [value] = useState("");
   let [tab, setTab] = useState(0);
   let [aniValue, setAniValue] = useState(false);
   //useEffect는 두번째 인자가 없으면 컴포넌트가 업데이트 될 때마다 실행된다. 그래서 두번째 인자에 해당 state를 넣어서 반복실행을 막아주면 좋다
