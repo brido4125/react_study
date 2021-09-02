@@ -1,8 +1,9 @@
-import React from "react";
-import { Button, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Table } from "react-bootstrap";
 import { connect } from "react-redux";
 
 function Cart(props) {
+  let [alert, setAlert] = useState(true);
   return (
     <div>
       <Table striped bordered hover>
@@ -42,12 +43,12 @@ function Cart(props) {
           })}
         </tbody>
       </Table>
-      {props.alertState === true ? (
+      {alert === true ? (
         <div className="soldOut-yellow">
           <p>지금 구매하시면 신규할인 20%</p>
           <button
             onClick={() => {
-              props.dispatch({ type: false });
+              setAlert(false);
             }}
           >
             닫기

@@ -8,8 +8,10 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { combineReducers, createStore } from "redux";
 
+/*
+  리덕스로 여러개 데이터 만드는 법
+*/
 let alertDefaultState = true;
-
 function alertReducer(state = alertDefaultState, action) {
   if (action.type === false) {
     let copy = state;
@@ -24,9 +26,12 @@ let defaultState = [
   { id: 0, name: "canvas", quan: 22 },
   { id: 1, name: "NB990", quan: 34 },
 ];
-
 function reducer(state = defaultState, action) {
-  if (action.type === "증가") {
+  if (action.type === "장바구니추가") {
+    let copy = [...state];
+    copy.push(action.payload);
+    return copy;
+  } else if (action.type === "증가") {
     let copy = [...state];
     copy[action.index].quan++;
     return copy;

@@ -6,6 +6,7 @@ import { Nav } from "react-bootstrap";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import "../Detail.scss";
+import { connect } from "react-redux";
 
 let Box = styled.div`
   padding: 20px;
@@ -15,7 +16,7 @@ let Title = styled.h4`
   color: ${(props) => props.color};
 `;
 
-export function Detail(props) {
+function Detail(props) {
   let [alert, setAlert] = useState(true);
   let [value, setValue] = useState("");
   let [tab, setTab] = useState(0);
@@ -62,7 +63,22 @@ export function Detail(props) {
           <p>{findItem.content}</p>
           <p>{findItem.price}원</p>
           <Stock stock={props.stock} index={index}></Stock>
-          <button className="btn btn-danger">장바구니에 담기</button>
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              props.dispatch({
+                type: "장바구니추가",
+                payload: {
+                  id: findItem.id,
+                  name: findItem.title,
+                  quan: 1,
+                },
+              });
+              history.push("/cart");
+            }}
+          >
+            장바구니에 담기
+          </button>
           <button
             className="btn btn-danger"
             onClick={() => {
@@ -119,4 +135,11 @@ function Stock(props) {
   return <p>재고 : {props.stock[props.index]}</p>;
 }
 
-export default Detail;
+function getData(state) {
+  return {
+    state: state.reducer,
+    alertState: state.alertReducer,
+  };
+}
+
+export default connect(getData)(Detail);

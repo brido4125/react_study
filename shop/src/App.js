@@ -7,8 +7,8 @@ import Data from "./data";
 import Navigation from "./component/Navigation";
 import { Item } from "./component/Item";
 import { Route } from "react-router-dom";
-import { Detail } from "./component/Detail";
 import Cart from "./component/Cart";
+import Detail from "./component/Detail";
 
 export let stockContext = React.createContext();
 
