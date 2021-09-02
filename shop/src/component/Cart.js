@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Table } from "react-bootstrap";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function Cart(props) {
+  let state = useSelector((state) => state.reducer);
+  let dispatch = useDispatch();
   let [alert, setAlert] = useState(true);
   return (
     <div>
@@ -16,7 +18,7 @@ function Cart(props) {
           </tr>
         </thead>
         <tbody>
-          {props.state.map((a, i) => {
+          {state.map((a, i) => {
             return (
               <tr key={i}>
                 <td>{a.id}</td>
@@ -25,14 +27,14 @@ function Cart(props) {
                 <td>
                   <button
                     onClick={() => {
-                      props.dispatch({ type: "증가", index: i });
+                      dispatch({ type: "증가", index: i });
                     }}
                   >
                     +
                   </button>
                   <button
                     onClick={() => {
-                      props.dispatch({ type: "감소", index: i });
+                      dispatch({ type: "감소", index: i });
                     }}
                   >
                     -
@@ -59,11 +61,4 @@ function Cart(props) {
   );
 }
 
-function getData(state) {
-  return {
-    state: state.reducer,
-    alertState: state.alertReducer,
-  };
-}
-
-export default connect(getData)(Cart);
+export default Cart;
