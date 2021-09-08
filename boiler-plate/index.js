@@ -5,7 +5,7 @@ const port = 9000;
 const mongoose = require("mongoose");
 mongoose
   .connect(
-    "mongodb+srv://brido:hcshcs@boilderplate.qvziz.mongodb.net/brido?retryWrites=true&w=majority",
+    "mongodb+srv://brido:<비밀번호>@boilderplate.qvziz.mongodb.net/brido?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
