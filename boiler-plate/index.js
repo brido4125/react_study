@@ -3,9 +3,11 @@ const app = express();
 const port = 9000;
 const { User } = require("./models/user");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 const config = require("./config/key");
 
@@ -28,6 +30,39 @@ app.post("/register", (req, res) => {
     if (err) return res.json({ success: false, err });
     return res.status(200).json({
       success: true,
+    });
+  });
+});
+
+app.post("/login", (req, res) => {
+  //요청된 이메일을 데이터베이스에서 먼저 찾는다
+  User.findOne({ email: req.body.email }, (err, user) => {
+    if (!user) {
+      return res.json({
+        loginSuccess: false,
+        mesasge: "해당 이메일은 존재하지 않습니다.",
+      });
+    }
+    //요청된 이메일이 데이터 베이스에 있다면 비밀번호가 일치한지 확인한다.
+    user.comparePassword(req.body.password, (err, isMatch) => {
+      console.log(req.body.password);
+      console.log(isMatch);
+      console.log(err);
+      if (!isMatch) {
+        return res.json({
+          loginSuccess: false,
+          message: "비밀번호가 틀렸습니다.",
+        });
+      }
+      //비밀번호가 맞으면 Token 생성한다.
+      user.generateToken((err, user) => {
+        if (err) return res.status(400).send(err);
+        //Token 저장하기 => Cookie or LocalStorage
+        res
+          .cookie("x_auth", user.token)
+          .status(200)
+          .json({ loginSuccess: true, userId: user._id });
+      });
     });
   });
 });
