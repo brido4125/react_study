@@ -4,6 +4,7 @@ const port = 9000;
 const { User } = require("./models/user");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const { auth } = require("./middleware/auth");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -24,7 +25,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/register", (req, res) => {
+app.post("api/users/register", (req, res) => {
   const user = new User(req.body);
   user.save((err, userInfo) => {
     if (err) return res.json({ success: false, err });
@@ -34,7 +35,7 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.post("/login", (req, res) => {
+app.post("api/users/login", (req, res) => {
   //요청된 이메일을 데이터베이스에서 먼저 찾는다
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
@@ -64,6 +65,19 @@ app.post("/login", (req, res) => {
           .json({ loginSuccess: true, userId: user._id });
       });
     });
+  });
+});
+
+app.get("api/users/auth", auth, (req, res) => {
+  // 여기까지 오면 auth 미들웨어를 에러없이 넘어옴 => Authentication == true 이다.
+  res.status(200).json({
+    _id: req.user._id,
+    idAdmin: req.user.role === 0 ? false : true,
+    isAuth: true,
+    email: req.user.email,
+    name: req.user.name,
+    role: req.user.role,
+    image: req.user.image,
   });
 });
 
