@@ -25,7 +25,8 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("api/users/register", (req, res) => {
+app.post("/api/users/register", (req, res) => {
+  console.log(req);
   const user = new User(req.body);
   user.save((err, userInfo) => {
     if (err) return res.json({ success: false, err });
@@ -35,7 +36,8 @@ app.post("api/users/register", (req, res) => {
   });
 });
 
-app.post("api/users/login", (req, res) => {
+app.post("/api/users/login", (req, res) => {
+  console.log(req);
   //요청된 이메일을 데이터베이스에서 먼저 찾는다
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
@@ -68,7 +70,7 @@ app.post("api/users/login", (req, res) => {
   });
 });
 
-app.get("api/users/auth", auth, (req, res) => {
+app.get("/api/users/auth", auth, (req, res) => {
   // 여기까지 오면 auth 미들웨어를 에러없이 넘어옴 => Authentication == true 이다.
   res.status(200).json({
     _id: req.user._id,
@@ -78,6 +80,13 @@ app.get("api/users/auth", auth, (req, res) => {
     name: req.user.name,
     role: req.user.role,
     image: req.user.image,
+  });
+});
+
+app.get("/api/users/logout", auth, (req, res) => {
+  User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+    if (err) return res.json({ success: false, err });
+    return res.status(200).send({ success: true });
   });
 });
 

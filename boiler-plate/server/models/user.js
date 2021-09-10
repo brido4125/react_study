@@ -72,7 +72,7 @@ userSchema.methods.generateToken = function (cb) {
   });
 };
 userSchema.statics.findByToken = function (token, cb) {
-  var user = this;
+  let user = this;
   //인자로 받은 토큰을 decode
   jwt.verify(token, "secretToken", function (err, decoded) {
     user.findOne({ _id: decoded, token: token }, function (err, user) {
