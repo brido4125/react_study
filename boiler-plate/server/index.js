@@ -26,10 +26,14 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/users/register", (req, res) => {
+  //등록시 중복 회원 조회 => mongoDB unique key가 해줌
   console.log(req);
   const user = new User(req.body);
   user.save((err, userInfo) => {
-    if (err) return res.json({ success: false, err });
+    if (err) {
+      console.log(err);
+      return res.json({ success: false, err });
+    }
     return res.status(200).json({
       success: true,
     });
