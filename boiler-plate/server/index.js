@@ -43,7 +43,7 @@ app.post("/api/users/login", (req, res) => {
     if (!user) {
       return res.json({
         loginSuccess: false,
-        mesasge: "해당 이메일은 존재하지 않습니다.",
+        message: "해당 이메일은 존재하지 않습니다.",
       });
     }
     //요청된 이메일이 데이터 베이스에 있다면 비밀번호가 일치한지 확인한다.

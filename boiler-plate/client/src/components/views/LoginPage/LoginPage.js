@@ -22,7 +22,7 @@ function LoginPage(props) {
       if (response.payload.loginSuccess) {
         props.history.push("/");
       } else {
-        alert("error");
+        alert(response.payload.message);
       }
     });
   };
