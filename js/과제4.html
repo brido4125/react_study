@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2 class="title odd" id="first_title">First Title</h2>
+    <p class="body odd" id="first_body"> First Body <p>
+    <h2 class="title even">Second Title</h2>
+    <p class="body even"> Second Body <p>
+    <h2 class="title odd"> Third Title </h2>
+    <p class="body odd"> Third Body <p>
+    <h2 class="title even"> Forth Title </h2>
+    <p class="body even"> Forth Body <p>
+    <h2 class="title odd" id="last_title"> Fifth Title </h2>
+    <p class="body odd" id="last_body"> Fifth Body <p>
+  <form id="my_form">
+  <b>CMD</b>
+  <select id="arg1" name="arg1" onchange="arg1Handler()">
+    <option value="modify">Modify</option>
+    <option value="delete">Delete</option>
+  </select>
+  <select id="arg2" name="arg2" onchange="arg2Handler()">
+    <option value="color">Color</option>
+    <option value="bgColor">BG-Color</option>
+    <option value="text">Text</option>
+  </select>
+    <b id="to">
+      to
+    </b>
+  <input type='text' id="arg3" onchange="arg3Handler()"/> where
+  <select id="arg4" name="arg4" onchange="arg4Handler()">
+    <option value="first">First</option>
+    <option value="last">Last</option>
+    <option value="even">Even</option>
+    <option value="odd">Odd</option>
+    <option value="all">All</option>
+  </select>
+  <select id="arg5" name="arg5" onchange="arg5Handler()">
+    <option value="title">Title</option>
+    <option value="body">Body</option>
+  </select>
+    <input type="button" id="button" value="OK"/>
+  </form>
+  <script src="과제4.js"></script>
+</body>
+</html>

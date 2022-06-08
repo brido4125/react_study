@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 데이터 다루기</title>
+</head>
+<body>
+<form id="my_form">
+  <div>
+    <select for="action">
+      <option value="modify">Modify</option>
+      <option value="delete">Delete</option>
+    </select>
+  </div>
+  <label for="name">이름 </label>
+  <input type="text"
+         id="name" name="name"
+         autocomplete="off">
+  <br><br>
+  <label for="sex">성별 </label>
+  <input type="text"
+         id="sex" name="sex"
+         autocomplete="off">
+  <br><br>
+  <label for="town">지역 </label>
+  <input type="text"
+         id="town" name="town"
+         autocomplete="off">
+  <br><br>
+  <button>제출</button>
+</form>
+<script>
+  document.getElementById('my_form').onsubmit = function(){
+    //파트1. 여기서 this는 'my_form'을 의미합니다.
+    var name = this.name.value
+    var sex = this.sex.value
+    var town = this.town.value
+    var action = this.action.value;
+    var content = name + ", " + sex + ", " + town + " " + action
+
+    //파트2. 새로운 <p> 태그를 하나 생성하여 body에 추가합니다.
+    var p = document.createElement('p')
+    p.textContent = content // 새로 만든 태그의 내용 지정하기
+    document.getElementsByTagName('body')[0].appendChild(p)
+
+    //파트3. input에 쓰여있던 모든 데이터를 없애줍니다(초기화).
+    this.name.value = ""
+    this.sex.value = ""
+    this.town.value = ""
+
+    //파트4. 제출 이벤트로 인한 새로고침 방지
+    return false;
+  }
+</script>
+</body>
+</html>
