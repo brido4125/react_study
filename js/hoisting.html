@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoisting</title>
+    <script>
+        printName('Brido');//호이스팅을 해서 printName 메서드를 사용할 수 있음.
+
+        function printName(name) {
+            console.log('My name is' + name + ".");
+        }
+
+        console.log(num);
+        var num = 6; // undefined로 초기화 => var Type인 경우
+        //let,const도 hositing의 대상 but 초기화 되지 않
+        //화살표 익명 함수 -> Hositing 대상이 아님
+
+
+
+    </script>
+</head>
+<body>
+<h2>
+    호이스팅
+</h2>
+<p>
+    JS 엔진이 변수와 메서드에 대해서 메모리 공간을 미리 확보해 놓는 동작.
+    인터프리터 언어이지만 컴파일 언어의 특성을 취한것이라고 볼 수 있음.
+    변수의 경우 var 타입만 undefined로 미리 선언 가능하고
+    메서드도 화살표 함수로는 hoisting으 대상이 아니다.
+</p>
+</body>
+</html>

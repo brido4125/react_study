@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1) 4로 나눠떨어지고 100으로 나눠 떨어지지 않아야함
+    //2) 400으로 나눠 떨어져야함
+    const isLeapYear = (year=new Date().getFullYear()) => {
+        return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0);
+    };
+    console.log(isLeapYear(2000));
+</script>
+</body>
+</html>

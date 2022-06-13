@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function callThreeTimes(callback) {
+        for (let i = 0; i < 3; i++) {
+            callback(i);
+        }
+    }
+
+    function print(i) {
+        console.log(i);
+    }
+
+    callThreeTimes(print);
+</script>
+</body>
+</html>
