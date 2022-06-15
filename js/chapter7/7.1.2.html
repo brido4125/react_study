@@ -1,0 +1,17 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMContentLoaded</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{//모든 HTML content 읽어들이면 이벤트 실행
+            const h1 = (text) => {
+                `<h1>${text}</h1>`
+            };
+            document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생')
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>

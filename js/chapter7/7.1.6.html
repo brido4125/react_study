@@ -1,0 +1,19 @@
+<!DOCTYPE html> <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMContentLoaded</title>
+    <script> document.addEventListener('DOMContentLoaded', () => {
+        const rects = document.querySelectorAll('.rect')
+        rects.forEach((rect, index) => {
+            const width = (index + 1) * 100
+            const src = `http://placekitten.com/${width}/250` rect.setAttribute('src', src)
+        }) })
+    </script>
+</head>
+
+<body>
+<img class="rect"> <img class="rect">
+<img class="rect"> <img class="rect">
+</body>
+</html>
