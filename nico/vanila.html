@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <span>Total clicks : </span>
+    <button id="btn">Click ME!</button>
+  </body>
+  <script>
+    let cnt = 0;
+    const button = document.getElementById("btn");
+    function handleClick() {
+      cnt = cnt + 1;
+    }
+    button.addEventListener("click", handleClick);
+  </script>
+</html>
