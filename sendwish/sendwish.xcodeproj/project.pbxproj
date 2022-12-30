@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23FD2DCC295EBE33007EBC1A /* sendwishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2DCB295EBE33007EBC1A /* sendwishApp.swift */; };
+		23FD2DCE295EBE33007EBC1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2DCD295EBE33007EBC1A /* ContentView.swift */; };
+		23FD2DD0295EBE35007EBC1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FD2DCF295EBE35007EBC1A /* Assets.xcassets */; };
+		23FD2DD4295EBE35007EBC1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23FD2DD3295EBE35007EBC1A /* Preview Assets.xcassets */; };
+		23FD2DDE295EBE35007EBC1A /* sendwishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2DDD295EBE35007EBC1A /* sendwishTests.swift */; };
+		23FD2DE8295EBE35007EBC1A /* sendwishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2DE7295EBE35007EBC1A /* sendwishUITests.swift */; };
+		23FD2DEA295EBE35007EBC1A /* sendwishUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2DE9295EBE35007EBC1A /* sendwishUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23FD2DDA295EBE35007EBC1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23FD2DC0295EBE33007EBC1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23FD2DC7295EBE33007EBC1A;
+			remoteInfo = sendwish;
+		};
+		23FD2DE4295EBE35007EBC1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23FD2DC0295EBE33007EBC1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23FD2DC7295EBE33007EBC1A;
+			remoteInfo = sendwish;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23FD2DC8295EBE33007EBC1A /* sendwish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sendwish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FD2DCB295EBE33007EBC1A /* sendwishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendwishApp.swift; sourceTree = "<group>"; };
+		23FD2DCD295EBE33007EBC1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23FD2DCF295EBE35007EBC1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23FD2DD1295EBE35007EBC1A /* sendwish.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sendwish.entitlements; sourceTree = "<group>"; };
+		23FD2DD3295EBE35007EBC1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23FD2DD9295EBE35007EBC1A /* sendwishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sendwishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FD2DDD295EBE35007EBC1A /* sendwishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendwishTests.swift; sourceTree = "<group>"; };
+		23FD2DE3295EBE35007EBC1A /* sendwishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sendwishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23FD2DE7295EBE35007EBC1A /* sendwishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendwishUITests.swift; sourceTree = "<group>"; };
+		23FD2DE9295EBE35007EBC1A /* sendwishUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendwishUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23FD2DC5295EBE33007EBC1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FD2DD6295EBE35007EBC1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FD2DE0295EBE35007EBC1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23FD2DBF295EBE33007EBC1A = {
+			isa = PBXGroup;
+			children = (
+				23FD2DCA295EBE33007EBC1A /* sendwish */,
+				23FD2DDC295EBE35007EBC1A /* sendwishTests */,
+				23FD2DE6295EBE35007EBC1A /* sendwishUITests */,
+				23FD2DC9295EBE33007EBC1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23FD2DC9295EBE33007EBC1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2DC8295EBE33007EBC1A /* sendwish.app */,
+				23FD2DD9295EBE35007EBC1A /* sendwishTests.xctest */,
+				23FD2DE3295EBE35007EBC1A /* sendwishUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23FD2DCA295EBE33007EBC1A /* sendwish */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2DCB295EBE33007EBC1A /* sendwishApp.swift */,
+				23FD2DCD295EBE33007EBC1A /* ContentView.swift */,
+				23FD2DCF295EBE35007EBC1A /* Assets.xcassets */,
+				23FD2DD1295EBE35007EBC1A /* sendwish.entitlements */,
+				23FD2DD2295EBE35007EBC1A /* Preview Content */,
+			);
+			path = sendwish;
+			sourceTree = "<group>";
+		};
+		23FD2DD2295EBE35007EBC1A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2DD3295EBE35007EBC1A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23FD2DDC295EBE35007EBC1A /* sendwishTests */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2DDD295EBE35007EBC1A /* sendwishTests.swift */,
+			);
+			path = sendwishTests;
+			sourceTree = "<group>";
+		};
+		23FD2DE6295EBE35007EBC1A /* sendwishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2DE7295EBE35007EBC1A /* sendwishUITests.swift */,
+				23FD2DE9295EBE35007EBC1A /* sendwishUITestsLaunchTests.swift */,
+			);
+			path = sendwishUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23FD2DC7295EBE33007EBC1A /* sendwish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FD2DED295EBE35007EBC1A /* Build configuration list for PBXNativeTarget "sendwish" */;
+			buildPhases = (
+				23FD2DC4295EBE33007EBC1A /* Sources */,
+				23FD2DC5295EBE33007EBC1A /* Frameworks */,
+				23FD2DC6295EBE33007EBC1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sendwish;
+			productName = sendwish;
+			productReference = 23FD2DC8295EBE33007EBC1A /* sendwish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23FD2DD8295EBE35007EBC1A /* sendwishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FD2DF0295EBE35007EBC1A /* Build configuration list for PBXNativeTarget "sendwishTests" */;
+			buildPhases = (
+				23FD2DD5295EBE35007EBC1A /* Sources */,
+				23FD2DD6295EBE35007EBC1A /* Frameworks */,
+				23FD2DD7295EBE35007EBC1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23FD2DDB295EBE35007EBC1A /* PBXTargetDependency */,
+			);
+			name = sendwishTests;
+			productName = sendwishTests;
+			productReference = 23FD2DD9295EBE35007EBC1A /* sendwishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23FD2DE2295EBE35007EBC1A /* sendwishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23FD2DF3295EBE35007EBC1A /* Build configuration list for PBXNativeTarget "sendwishUITests" */;
+			buildPhases = (
+				23FD2DDF295EBE35007EBC1A /* Sources */,
+				23FD2DE0295EBE35007EBC1A /* Frameworks */,
+				23FD2DE1295EBE35007EBC1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23FD2DE5295EBE35007EBC1A /* PBXTargetDependency */,
+			);
+			name = sendwishUITests;
+			productName = sendwishUITests;
+			productReference = 23FD2DE3295EBE35007EBC1A /* sendwishUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23FD2DC0295EBE33007EBC1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					23FD2DC7295EBE33007EBC1A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					23FD2DD8295EBE35007EBC1A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 23FD2DC7295EBE33007EBC1A;
+					};
+					23FD2DE2295EBE35007EBC1A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 23FD2DC7295EBE33007EBC1A;
+					};
+				};
+			};
+			buildConfigurationList = 23FD2DC3295EBE33007EBC1A /* Build configuration list for PBXProject "sendwish" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23FD2DBF295EBE33007EBC1A;
+			productRefGroup = 23FD2DC9295EBE33007EBC1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23FD2DC7295EBE33007EBC1A /* sendwish */,
+				23FD2DD8295EBE35007EBC1A /* sendwishTests */,
+				23FD2DE2295EBE35007EBC1A /* sendwishUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23FD2DC6295EBE33007EBC1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FD2DD4295EBE35007EBC1A /* Preview Assets.xcassets in Resources */,
+				23FD2DD0295EBE35007EBC1A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FD2DD7295EBE35007EBC1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FD2DE1295EBE35007EBC1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23FD2DC4295EBE33007EBC1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FD2DCE295EBE33007EBC1A /* ContentView.swift in Sources */,
+				23FD2DCC295EBE33007EBC1A /* sendwishApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FD2DD5295EBE35007EBC1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FD2DDE295EBE35007EBC1A /* sendwishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23FD2DDF295EBE35007EBC1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FD2DEA295EBE35007EBC1A /* sendwishUITestsLaunchTests.swift in Sources */,
+				23FD2DE8295EBE35007EBC1A /* sendwishUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23FD2DDB295EBE35007EBC1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23FD2DC7295EBE33007EBC1A /* sendwish */;
+			targetProxy = 23FD2DDA295EBE35007EBC1A /* PBXContainerItemProxy */;
+		};
+		23FD2DE5295EBE35007EBC1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23FD2DC7295EBE33007EBC1A /* sendwish */;
+			targetProxy = 23FD2DE4295EBE35007EBC1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23FD2DEB295EBE35007EBC1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23FD2DEC295EBE35007EBC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		23FD2DEE295EBE35007EBC1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sendwish/sendwish.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sendwish/Preview Content\"";
+				DEVELOPMENT_TEAM = 32KDFQH4SW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hello.sendwish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23FD2DEF295EBE35007EBC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = sendwish/sendwish.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"sendwish/Preview Content\"";
+				DEVELOPMENT_TEAM = 32KDFQH4SW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hello.sendwish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23FD2DF1295EBE35007EBC1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32KDFQH4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hello.sendwishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sendwish.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sendwish";
+			};
+			name = Debug;
+		};
+		23FD2DF2295EBE35007EBC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32KDFQH4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hello.sendwishTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sendwish.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sendwish";
+			};
+			name = Release;
+		};
+		23FD2DF4295EBE35007EBC1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32KDFQH4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hello.sendwishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sendwish;
+			};
+			name = Debug;
+		};
+		23FD2DF5295EBE35007EBC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32KDFQH4SW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hello.sendwishUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sendwish;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23FD2DC3295EBE33007EBC1A /* Build configuration list for PBXProject "sendwish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FD2DEB295EBE35007EBC1A /* Debug */,
+				23FD2DEC295EBE35007EBC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23FD2DED295EBE35007EBC1A /* Build configuration list for PBXNativeTarget "sendwish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FD2DEE295EBE35007EBC1A /* Debug */,
+				23FD2DEF295EBE35007EBC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23FD2DF0295EBE35007EBC1A /* Build configuration list for PBXNativeTarget "sendwishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FD2DF1295EBE35007EBC1A /* Debug */,
+				23FD2DF2295EBE35007EBC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23FD2DF3295EBE35007EBC1A /* Build configuration list for PBXNativeTarget "sendwishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23FD2DF4295EBE35007EBC1A /* Debug */,
+				23FD2DF5295EBE35007EBC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23FD2DC0295EBE33007EBC1A /* Project object */;
+}
