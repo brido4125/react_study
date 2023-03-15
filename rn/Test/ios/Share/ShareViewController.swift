@@ -1,8 +1,8 @@
 //
 //  ShareViewController.swift
-//  share
+//  Share
 //
-//  Created by 홍창섭 on 2023/01/02.
+//  Created by 홍창섭 on 2023/01/05.
 //
 
 import UIKit

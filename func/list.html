@@ -1,0 +1,54 @@
+<script>const log = console.log</script>
+
+## 기존과 달라진 ES6에서의 리스트 순회
+
+<script>
+    const list = [1,2,3]
+    for (let i = 0; i < list.length ; i ++){
+        log(list[i])
+    }
+    for (const a of list) {
+        log(a)
+    }
+</script>
+
+## Array 순회
+<script>
+    log('Arr --------------------')
+    const arr = [1,2,3]
+    let iter1 = arr[Symbol.iterator]()
+    iter1.next()
+    for(const a of arr){
+        console.log(a)
+    }
+</script>
+
+# map,set은 인덱스로 조회가 안됨 => symbol.iterator
+
+## set 순회
+<script>
+    log('set --------------------')
+    const set = new Set([1,2,3])
+    for(const a of set){
+        console.log(a)
+    }
+</script>
+
+
+## Map 순회
+<script>
+    log('Map --------------------')
+    const map = new Map([['a',1],['b',2],['c',3]])
+    for(const a of map){
+        console.log(a)
+    }
+    for(const a of map.keys()){
+        console.log(a)
+    }
+    for(const a of map.values()){
+        console.log(a)
+    }
+    for(const a of map.entries()){
+        console.log(a)
+    }
+</script>
